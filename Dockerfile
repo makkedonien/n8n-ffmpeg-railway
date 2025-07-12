@@ -14,8 +14,4 @@ RUN apk update && \
 # Switch back to the default node user for security
 USER node
 
-# Expose the default n8n port
-EXPOSE 5678
-
-# Use the default n8n entrypoint
-CMD ["n8n"]
+# Don't override CMD - let the base image handle the entrypoint
